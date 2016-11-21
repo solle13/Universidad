@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+
+main()
+	{
+   int arre[10],i=0,j=0,temp=0;
+   clrscr();
+   printf("Metodo de la burbuja");
+   printf("\nDatos:");
+   for(i=0;i<10;i++)
+   	{
+      arre[i]=1+rand()%51;
+      }
+   for(i=0;i<10;i++)
+   	{
+      printf("\n%d",arre[i]);
+      }
+   getch();
+   for(i=0;i<10;i++)
+   	{
+      for(j=0;j<10;j++)
+      	{
+         if(arre[i]>arre[j])
+            {
+            temp=arre[j];
+         	arre[j]=arre[i];
+            arre[i]=temp;
+            }
+         }
+      }
+   getch();
+   printf("\n");
+   printf("\nOrdenados:");
+   for(i=0;i<10;i++)
+   	{
+      printf("\n%d",arre[i]);
+      }
+   getch();
+   }
